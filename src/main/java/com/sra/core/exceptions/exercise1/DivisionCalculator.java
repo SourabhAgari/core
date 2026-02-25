@@ -30,7 +30,7 @@ public class DivisionCalculator {
                 } catch (ArithmeticException e){
                     System.out.println("Input Error: Divisor cannot be zero");
                 } catch (Exception e) {
-                    System.out.println("Input Error: Unknown error");
+                    System.out.println("Input Error: Unknown error"+e.getMessage());
                     break;
                 }
             }
