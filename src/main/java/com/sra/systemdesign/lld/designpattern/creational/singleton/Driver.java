@@ -1,4 +1,4 @@
-package com.sra.systemdesign.lld.designpattern.singleton;
+package com.sra.systemdesign.lld.designpattern.creational.singleton;
 
 public class Driver {
     public static void main(String[] args) {
