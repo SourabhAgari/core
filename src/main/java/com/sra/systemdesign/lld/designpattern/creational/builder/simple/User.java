@@ -1,6 +1,4 @@
-package com.sra.systemdesign.lld.designpattern.creational.builder;
-
-import java.nio.Buffer;
+package com.sra.systemdesign.lld.designpattern.creational.builder.simple;
 
 public class User {
     private String name;

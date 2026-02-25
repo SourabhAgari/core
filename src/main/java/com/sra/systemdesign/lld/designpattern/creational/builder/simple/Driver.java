@@ -1,4 +1,4 @@
-package com.sra.systemdesign.lld.designpattern.creational.builder;
+package com.sra.systemdesign.lld.designpattern.creational.builder.simple;
 
 public class Driver {
     public static void main(String[] args) {
