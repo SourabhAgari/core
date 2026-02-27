@@ -1,4 +1,4 @@
-package com.sra.systemdesign.lld.designpattern.behavioral.strategy;
+package com.sra.systemdesign.lld.designpattern.behavioral.strategy.payment;
 
 public class Main {
     public static void main(String[] args) {

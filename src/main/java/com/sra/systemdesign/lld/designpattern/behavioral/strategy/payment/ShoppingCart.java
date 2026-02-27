@@ -1,4 +1,4 @@
-package com.sra.systemdesign.lld.designpattern.behavioral.strategy;
+package com.sra.systemdesign.lld.designpattern.behavioral.strategy.payment;
 
 public class ShoppingCart {
     private final PaymentStrategy paymentStrategy;
