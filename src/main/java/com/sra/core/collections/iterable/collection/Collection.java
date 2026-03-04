@@ -3,6 +3,7 @@ package com.sra.core.collections.iterable.collection;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 public class Collection {
     public static void main(String[] args) {
@@ -26,7 +27,12 @@ public class Collection {
         numbers.removeAll(numbers);
         System.out.println(numbers);
 
-        numbers.addAll(Arrays.asList(1, 2, 3, 4, 5));
-        System.out.println("After addAll:"+numbers);
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.push(2);
+        stack.push(3);
+
+        numbers.addAll(stack);
+        System.out.println(numbers);
     }
 }
