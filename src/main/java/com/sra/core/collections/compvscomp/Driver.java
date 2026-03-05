@@ -21,7 +21,9 @@ public class Driver {
         // now what if i want to sort by age instead of score?
         // doesn't work because we have not defined a comparator for age
 
-        Comparator<Student> nameComparator = Comparator.comparing(Student::getName);
+        Comparator<Student> nameComparator = Comparator.comparing(Student::getName).reversed()
+                .thenComparingInt(Student::getAge).reversed() // makes it faster
+                .thenComparingDouble(Student::getMarks).reversed();
         Collections.sort(students, nameComparator);
         System.out.println(students);
 
