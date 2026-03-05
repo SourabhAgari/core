@@ -1,4 +1,4 @@
-package com.sra.core.collections.iterable.collection;
+package com.sra.core.collections.collection;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,6 +33,10 @@ public class Collection {
         stack.push(3);
 
         numbers.addAll(stack);
+        System.out.println(numbers);
+
+        numbers.add(9);
+        numbers.removeAll(stack);
         System.out.println(numbers);
     }
 }
