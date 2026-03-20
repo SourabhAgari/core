@@ -39,6 +39,13 @@ public class InterOps {
         System.out.println("Peek Operation Output:"+
                 numbers.stream().filter(x -> x % 2 == 0).peek(x -> System.out.println("Even number: "+x)).toList());
 
+
+        System.out.println("Limit and Skip Operation Output:"+
+                numbers.stream()
+                        .skip(5)
+                        .filter(x -> x % 2 == 0)
+                        .limit(3)
+                        .toList());
     }
 
     private static Stream<String> filter(List<String> list){
