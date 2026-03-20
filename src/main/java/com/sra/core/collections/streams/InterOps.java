@@ -35,6 +35,10 @@ public class InterOps {
         System.out.println("Sorted in reverse order:"+
                 listOfWords.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()));
 
+        List<Integer> numbers = List.of(1,2,3,4,5,6,7,8,9,10);
+        System.out.println("Peek Operation Output:"+
+                numbers.stream().filter(x -> x % 2 == 0).peek(x -> System.out.println("Even number: "+x)).toList());
+
     }
 
     private static Stream<String> filter(List<String> list){
