@@ -26,7 +26,8 @@ public class MonitorLockExample2 {
         }
     }
 
-    public void task3(){
+    public void task3() throws InterruptedException {
+        Thread.sleep(100);
         System.out.println("no synchronization");
     }
 }
