@@ -1,4 +1,4 @@
-package com.sra.core.multithreading.basics;
+package com.sra.core.multithreading.basics.creation.interfaces;
 
 public class MultiThreadingLearning implements Runnable{
 
