@@ -1,7 +1,9 @@
 package com.sra.core.multithreading.basics;
 
-public class MultiThreadingLearning {
-    public static void main(String[] args) {
-        System.out.println("Thread Name:"+Thread.currentThread().getName());
+public class MultiThreadingLearning implements Runnable{
+
+    @Override
+    public void run() {
+        System.out.println("Code is running in thread: " + Thread.currentThread().getName());
     }
 }
