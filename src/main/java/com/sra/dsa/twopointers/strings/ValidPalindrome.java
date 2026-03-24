@@ -6,7 +6,7 @@ public class ValidPalindrome {
         System.out.println(validPalindrome(s));
     }
 
-    private static boolean validPalindrome(String s){
+    public static boolean validPalindrome(String s){
         int left = 0, right = s.length() - 1;
         while (left < right) {
             while (left < right && !Character.isLetterOrDigit(s.charAt(left))) left++;
