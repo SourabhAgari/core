@@ -4,20 +4,23 @@ import java.util.Arrays;
 
 public class MaxProd3Nums {
     public static void main(String[] args) {
-        int[] nums = {-100,-98,-1,2,3,4};
+        int[] nums = {1,2,3};
         System.out.println(maximumProduct(nums));
     }
 
     private static int maximumProduct(int[] nums){
-        Arrays.sort(nums);
-        int length = nums.length;
         int max = Integer.MIN_VALUE;
-        for(int i=0;i<length-2;i++){
-            int product = nums[i] * nums[i+1] * nums[i+2];
-            max = Math.max(max, product);
-            System.out.println(max);
+        int min1 = Integer.MAX_VALUE, min2 = Integer.MAX_VALUE;
+        for(int num: nums){
+            if(num > max) max = num;
+            if(num < min1){
+                min2 = min1;
+                min1 = num;
+            } else if (num < min2) {
+                min2 = num;
+            }
         }
-        return max;
-
+        System.out.println("max: " + max + " min1: " + min1 + " min2: " + min2);
+        return max * min1 * min2;
     }
 }
