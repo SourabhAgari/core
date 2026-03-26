@@ -9,18 +9,10 @@ public class MaxProd3Nums {
     }
 
     private static int maximumProduct(int[] nums){
-        int max = Integer.MIN_VALUE;
-        int min1 = Integer.MAX_VALUE, min2 = Integer.MAX_VALUE;
-        for(int num: nums){
-            if(num > max) max = num;
-            if(num < min1){
-                min2 = min1;
-                min1 = num;
-            } else if (num < min2) {
-                min2 = num;
-            }
-        }
-        System.out.println("max: " + max + " min1: " + min1 + " min2: " + min2);
-        return max * min1 * min2;
+        Arrays.sort(nums);
+        int length = nums.length;
+        if(length < 3) return -1;
+        return Math.max(nums[length-1]*nums[length-2]*nums[length-3],
+                nums[0]*nums[1]*nums[length-1]);
     }
 }
