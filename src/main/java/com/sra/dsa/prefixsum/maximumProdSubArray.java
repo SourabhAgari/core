@@ -18,4 +18,17 @@ public class maximumProdSubArray {
         }
         return maxProd;
     }
+
+    private static int maxProductOptimal(int[] nums){
+        int leftSum = 1, rightSum = 1;
+        int maxProd = nums[0];
+        for(int i=0;i<nums.length;i++){
+            leftSum = leftSum ==0 ? 1 : leftSum;
+            rightSum = rightSum == 0 ? 1 : rightSum;
+            leftSum *= nums[i];
+            rightSum *= nums[nums.length - 1 - i];
+            maxProd = Math.max(maxProd, Math.max(leftSum, rightSum));
+        }
+        return maxProd;
+    }
 }
